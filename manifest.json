@@ -1,6 +1,6 @@
 {
 	"name": "HeaderHelper",
-	"version": "0.5",
+	"version": "2012.11.28",
 	"icons": {
 		"32": "icon32.png",
 		"48": "icon48.png"
@@ -8,12 +8,14 @@
 	"minimum_chrome_version": "10.0",
 	"description": "view ResponsesHeader in Developer Tools, experimental for FireLogger and FirePHP",
 	"devtools_page": "devtools.html",
-	"background_page": "background.html",
+	"background": { "scripts": ["lib/md5.js", "lib/base64.js", "background.js"] },
 	"options_page": "options.html",
 	"permissions": [
-		"experimental",
-		"tabs",
-		"http://*/*",
-		"https://*/*"
-	]
+        "webRequest",
+        "experimental",
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+	],
+    "manifest_version": 2
 }

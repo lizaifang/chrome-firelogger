@@ -1,10 +1,5 @@
-<html>
-<head>
-<script src="lib/base64.js"></script>
-<script src="lib/md5.js"></script>
-<script src="lib/utf8.js"></script>
-<script>
 chrome.extension.onRequest.addListener(function(request) {
+    console.log('asd');
 	if (request.command !== 'toConsole')
 		return;
 	chrome.tabs.executeScript(request.tabId, {
@@ -54,16 +49,3 @@ X-FireLoggerProfiler	1
 X-FireLoggerAppstats	1
 x-insight	activate
 */
-
-/*
-chrome.experimental.devtools.panels.create("FireLogger", "firelogger-64.png", "Panel.html");
-
-chrome.experimental.devtools.panels.elements.createSidebarPane("Font Properties",
-    function(sidebar) {
-      sidebar.setPage("Sidebar.html");
-      sidebar.setHeight("8ex");
-    });
-*/
-</script>
-</head>
-</html>
